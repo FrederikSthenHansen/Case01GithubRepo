@@ -2,5 +2,31 @@
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
+@model BingoPlateGenerator.Models.DisplayModels.FactoryDisplay
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+@foreach (BingoPlate item in Model.MyDisplay.Batch)
+{
+    <table>
+        <tbody>
+
+            @for (int y = 0; y < item.Columns[y].Length; y++)
+            {
+                <tr>
+
+                    @for (int x = 0; x < item.Columns.Length; x++)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Columns[y][x]);
+                        </td>
+
+                    }
+
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}

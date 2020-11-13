@@ -14,11 +14,14 @@ namespace BingoPlateGenerator
     {
         public static void Main(string[] args)
         {
+            Models.DisplayModels.FactoryDisplay display = new Models.DisplayModels.FactoryDisplay();
             CreateHostBuilder(args).Build().Run();
 
 
             //testing space
+
             
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

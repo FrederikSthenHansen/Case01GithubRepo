@@ -55,7 +55,7 @@ namespace BingoPlateGenerator.Models
         {
             
 
-            for (int x = 0; x < Columns.Length; x++)
+            for (int x = 0; x < Columns[x].Length; x++)
             {
                 int columnPrintsAllowed = 2;
 
@@ -111,7 +111,7 @@ namespace BingoPlateGenerator.Models
 
         public int GenerateFieldValue(int columnNumber)
         {
-            Random rng = new Random(RNG.Next(int.MinValue, int.MaxValue));
+            Random rng = new Random(RNG.Next(-1000, 1000));
             int val = 0;
             switch (columnNumber)
             {

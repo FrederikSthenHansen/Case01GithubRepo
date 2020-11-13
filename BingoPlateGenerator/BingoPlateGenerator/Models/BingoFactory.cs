@@ -24,5 +24,10 @@ namespace BingoPlateGenerator.Models
 
         }
 
+        public BingoFactory()
+        {
+            Batch = new List<BingoPlate>();
+        }
+
     }
 }
