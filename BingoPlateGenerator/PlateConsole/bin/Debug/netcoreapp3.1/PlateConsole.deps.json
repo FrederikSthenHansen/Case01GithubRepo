@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "PlateConsole/1.0.0": {
+        "dependencies": {
+          "BingoPlateGenerator": "1.0.0"
+        },
+        "runtime": {
+          "PlateConsole.dll": {}
+        }
+      },
+      "BingoPlateGenerator/1.0.0": {
+        "runtime": {
+          "BingoPlateGenerator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PlateConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BingoPlateGenerator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

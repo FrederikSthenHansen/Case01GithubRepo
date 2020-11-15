@@ -13,15 +13,41 @@ namespace BingoPlateGenerator.Models
 
         public void PrintNewBatch(string name, int amount)
         {
-            int leftToPrint = amount;
-
-            for (int i = Batch.Count; i <= Batch.Count + leftToPrint; i++)
+            for (int i = 0; i < amount; i++)
             {
-                BingoPlate Pl8 = new BingoPlate(i - 1, name);
+                BingoPlate Plate = new BingoPlate(i + 1, name);
 
-                Batch.Add(Pl8);
+                if (VerifyPlate(Plate) == true)
+                {
+                    Batch.Add(Plate);
+                }
+                else { i--; }       
             }
+        }
 
+        public bool VerifyPlate(BingoPlate newPlate)
+        { bool retValue = false;
+            if (Batch.Count == 0)
+            {
+                retValue = true;
+            }
+            else
+            {
+                foreach (BingoPlate plate in Batch)
+                {
+                    if (plate == null)
+                    { retValue = true; }
+                    if (newPlate.UniqueId != plate.UniqueId)
+                    {
+                        retValue = true;
+                    }
+                    else
+                    {
+                        retValue = false;
+                    }
+                }
+            }
+            return retValue;
         }
 
         public BingoFactory()

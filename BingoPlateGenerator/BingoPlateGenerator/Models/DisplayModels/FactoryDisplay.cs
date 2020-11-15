@@ -15,10 +15,11 @@ namespace BingoPlateGenerator.Models.DisplayModels
         public FactoryDisplay()
         {
             MyDisplay.Batch = new List<BingoPlate>();
-               for (int i=0; i < 3; i++)
-            {
-                MyDisplay.Batch.Add(new BingoPlate(i + 1, "test"));
-            }
+            MyDisplay.PrintNewBatch("test", 10);
+            //   for (int i=0; i < 3; i++)
+            //{
+            //    MyDisplay.Batch.Add(new BingoPlate(i + 1, "test"));
+            //}
 
         }
        public void PrintToDisplay()
