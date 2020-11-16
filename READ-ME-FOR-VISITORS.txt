@@ -2,4 +2,5 @@ The "PlateGenerator" MVC app is WIP and will cause an exception, crashing the ap
 The reason for this is the Razor syntax i put in the the View "privacy" that would display the generated bingoPlates. 
 
 "Privacy.cshtml" Razor code was partially reverse engineered from my thesis, where we also generated tables to display from our model. 
-Differences in architecture of the two projects made replicating a displaymodel for the Razor syntax to work, more complicated than what i could solve within the 4 day scope of the project
+Differences in architecture of the two projects made replicating a displaymodel for the Razor syntax to work, more complicated than
+what i could solve within the 4 day scope of the project.
