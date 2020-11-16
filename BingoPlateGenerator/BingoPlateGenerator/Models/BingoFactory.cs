@@ -15,42 +15,74 @@ namespace BingoPlateGenerator.Models
         {
             for (int i = 0; i < amount; i++)
             {
-                BingoPlate Plate = new BingoPlate(i + 1, name);
+                BingoPlate newPlate = new BingoPlate(i + 1, name);
 
-                if (VerifyPlate(Plate) == true)
-                {
-                    Batch.Add(Plate);
-                }
-                else { i--; }       
+                checkAndAdd(newPlate);
+                       
             }
         }
+        private void checkAndAdd(BingoPlate plate)
+        {
+            int rowToFix =600;
+            rowToFix = VerifyPlate(plate);
+            if (rowToFix == 5)
+            {
+                Batch.Add(plate);
+            }
+            else 
+            { 
+                for (int x = 0; x < 9; x++) { plate.printSucces(rowToFix,x); }
+                //checkAndAdd(plate);
+                
+            } 
+                
+        }
 
-        public bool VerifyPlate(BingoPlate newPlate)
-        { bool retValue = false;
+        private int allRowsAreLegal(BingoPlate plate)
+        { int retvalue = 5;
+            for (int y=0;y<3; y++)
+            {
+                if (plate.VerifyRow(y) != 4)
+                {
+                    retvalue =y;
+                }
+            }
+            return retvalue;
+        }
+
+        public int VerifyPlate(BingoPlate newPlate)
+        { int retValue = 0;
             if (Batch.Count == 0)
             {
-                retValue = true;
+                retValue = 5;
             }
             else
             {
                 foreach (BingoPlate plate in Batch)
                 {
                     if (plate == null)
-                    { retValue = true; }
+                    { retValue = 5; }
+
+                    //er UnikID forskellig?
                     if (newPlate.UniqueId != plate.UniqueId)
                     {
-                        retValue = true;
+                        retValue = allRowsAreLegal(plate);
                     }
 
                     //hvis Unik ID er det samme fordi jeg tester en plade imod sig selv
                     else if (newPlate.UniqueId == plate.UniqueId && newPlate.Id == plate.Id)
-                    { retValue = true; }
+                    {
+                        retValue = allRowsAreLegal(plate);
+                    }
                     else
                     {
-                        retValue = false;
+                        
+                        retValue = 404;
                     }
                 }
             }
+            //så vi kan se pladerne
+            retValue = 5;
             return retValue;
         }
 

@@ -12,7 +12,7 @@ namespace BingoPlateGenerator.Models
     public class BingoPlate
     {
         public int stacktracer;
-        int ColumnPrintsAllowed=0;
+         public int ColumnPrintsAllowed=0;
        public string UniqueId;
         int fails = 0;
         public string Name;
@@ -27,7 +27,7 @@ namespace BingoPlateGenerator.Models
 
         //public Hash _uniqueID;
         private Random RNG= new Random();
-        public int TotalNumbers;
+        public int TotalNumbers=0;
 
        
         /// <summary>
@@ -48,7 +48,7 @@ namespace BingoPlateGenerator.Models
 
 
 
-            if (verifyRow(1) > 4)
+            if (VerifyRow(1) > 4)
             {
                 for (int x = 0; x < 9; x++)
                 {
@@ -86,7 +86,7 @@ namespace BingoPlateGenerator.Models
         /// Hoved-metode til at printe indhold i bingopladen. Kalder Checkspot
         /// </summary>
         private void printLoop()
-        {
+        { 
             for (int x = 0; x < Columns.Length; x++)
             {
                 int[] monitorColumn = Columns[x];
@@ -99,7 +99,8 @@ namespace BingoPlateGenerator.Models
                 {
                     if (CheckSpot(y, x, ColumnPrintsAllowed) == true)
                     {
-                        ColumnPrintsAllowed--;
+                        Zeros = Array.FindAll(monitorColumn, element => element.Equals(0));
+                        ColumnPrintsAllowed = Zeros.Length - 1;
                         TotalNumbers++;
                     }
                 }
@@ -110,7 +111,7 @@ namespace BingoPlateGenerator.Models
         /// <summary>
         /// metode til at checke at en række på pladen er lovlig
         /// </summary>
-        private int verifyRow(int y)
+        public int VerifyRow(int y)
         {
                 int[] row=new int[9];
 
@@ -154,7 +155,7 @@ namespace BingoPlateGenerator.Models
                 case 1:
                     previousVal = Columns[columnNumber]/*.Row*/[rowNumber - 1];
                     nextVal = Columns[columnNumber]/*.Row*/[rowNumber + 1];
-                    if (nextVal == 0) { nextVal = 110; }
+                    if (nextVal == 0) { nextVal = 109; }
                     break;
 
                 case 2:
@@ -166,14 +167,14 @@ namespace BingoPlateGenerator.Models
             }
 
             //check at der ikke er skrevet 5 tal i rækken endnu
-            if (verifyRow(rowNumber) >4)
+            if (VerifyRow(rowNumber) > 4)
             {
                 val = GenerateFieldValue(columnNumber);
 
                 //Check at at det tidligere tal i kolonnen er lavere, samt det næste er højere og kald recursivt via printSucces, hvis ikke dette virker.
                 // Ved 3 forsøg opgives der, maxværdi som previous value ellers skaber infinite loop.. ligningsudgaver står over hver IF-else statement
 
-                // prevVal<val<nextval<furthernextval
+                // furtherprevval<prevVal<val<nextval<furthernextval
                 if (val > previousVal && previousVal>furtherPreviousVal && val < nextVal && nextVal < furtherNextVal && ColumnPrintsAllowed > 0)
                 {
                     Columns[columnNumber]/*.Row*/[rowNumber] = val;
@@ -182,35 +183,35 @@ namespace BingoPlateGenerator.Models
                 }
 
                 //nextval=0  Furthernextval>val>previousval 
-                else if (val > previousVal && previousVal > furtherPreviousVal && nextVal == 0 && val < furtherNextVal && ColumnPrintsAllowed > 0)
-                {
-                    Columns[columnNumber]/*.Row*/[rowNumber] = val;
-                    fails = 0;
-                    return 0;
-                }
+                //else if (val > previousVal && previousVal > furtherPreviousVal && nextVal == 0 && val < furtherNextVal && ColumnPrintsAllowed > 0)
+                //{
+                //    Columns[columnNumber]/*.Row*/[rowNumber] = val;
+                //    fails = 0;
+                //    return 0;
+                //}
 
                 //val>prevVal next+futhernext =0
-                else if (val > previousVal && previousVal > furtherPreviousVal && nextVal == 0 && furtherNextVal == 0 && ColumnPrintsAllowed > 0)
-                {
-                    Columns[columnNumber]/*.Row*/[rowNumber] = val;
-                    fails = 0;
-                    return 0;
-                }
+                //else if (val > previousVal && previousVal > furtherPreviousVal && nextVal == 0 && furtherNextVal == 0 && ColumnPrintsAllowed > 0)
+                //{
+                //    Columns[columnNumber]/*.Row*/[rowNumber] = val;
+                //    fails = 0;
+                //    return 0;
+                //}
 
                 //nextval>val>prevVal og furthernextval=0
-                else if (val > previousVal && previousVal > furtherPreviousVal && val < nextVal && furtherNextVal == 0 && ColumnPrintsAllowed > 0)
-                {
-                    Columns[columnNumber]/*.Row*/[rowNumber] = val;
-                    fails = 0;
-                    return 0;
-                }
+                //else if (val > previousVal && previousVal > furtherPreviousVal && val < nextVal && furtherNextVal == 0 && ColumnPrintsAllowed > 0)
+                //{
+                //    Columns[columnNumber]/*.Row*/[rowNumber] = val;
+                //    fails = 0;
+                //    return 0;
+                //}
 
-                else if (val<previousVal && furtherNextVal==0||previousVal==0 && furtherPreviousVal < val)
-                {
-                    Columns[columnNumber]/*.Row*/[rowNumber] = val;
-                    fails = 0;
-                    return 0;
-                }
+                //else if (val<previousVal && furtherNextVal==0||previousVal==0 && furtherPreviousVal < val)
+                //{
+                //    Columns[columnNumber]/*.Row*/[rowNumber] = val;
+                //    fails = 0;
+                //    return 0;
+                //}
 
                 else if (/*fails >= 3 ||*/ stacktracer >= 10)
                 {
@@ -220,11 +221,11 @@ namespace BingoPlateGenerator.Models
                 {
                     stacktracer++;
                     printSucces(rowNumber, columnNumber);
-                    return fails;
+                    
                 }
             }
             else { return 3; }
-
+            return printSucces(rowNumber, columnNumber);
         }
 
         /// <summary>
@@ -306,10 +307,10 @@ namespace BingoPlateGenerator.Models
                 int chance = rng.Next(0, 2);
 
                 //hvis vi ikke har skrevet i øverste felt, vil vi som udgangspunkt gerne skrive.
-                if (rowNumber >0 && remainingPrints==2 || rowNumber == 2 && remainingPrints > 0) 
+                if (rowNumber >0 && remainingPrints==2 && TotalNumbers < 15 || rowNumber == 2 && remainingPrints > 0 && TotalNumbers < 15)
                 { chance = 1; }
 
-                if (chance == 1 && remainingPrints > 0)
+                if (chance == 1 && remainingPrints > 0 && TotalNumbers < 15)
                 {
                     switch (rowNumber)
                     {
@@ -322,6 +323,7 @@ namespace BingoPlateGenerator.Models
                             }
                             else
                             {
+                                //forsøg at printe
                                 switch (printSucces(rowNumber, columnNumber))
                                 {
                                     case 3:
@@ -336,6 +338,7 @@ namespace BingoPlateGenerator.Models
                             }
 
                         default:
+                            //forsøg at printe
                             switch (printSucces(rowNumber, columnNumber))
                             {
                                 case 3:
