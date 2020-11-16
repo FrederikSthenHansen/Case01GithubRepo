@@ -41,6 +41,10 @@ namespace BingoPlateGenerator.Models
                     {
                         retValue = true;
                     }
+
+                    //hvis Unik ID er det samme fordi jeg tester en plade imod sig selv
+                    else if (newPlate.UniqueId == plate.UniqueId && newPlate.Id == plate.Id)
+                    { retValue = true; }
                     else
                     {
                         retValue = false;

@@ -10,7 +10,7 @@ namespace PlateConsole
             //Console.WriteLine("Hello World!");
             BingoFactory ConsoleFactory = new BingoFactory();
             CardPrinter printer = new CardPrinter();
-            ConsoleFactory.PrintNewBatch("test", 6);
+            ConsoleFactory.PrintNewBatch("test", 20);
             foreach(var item in ConsoleFactory.Batch)
             {
                 printer.printBingoToConsole(item);

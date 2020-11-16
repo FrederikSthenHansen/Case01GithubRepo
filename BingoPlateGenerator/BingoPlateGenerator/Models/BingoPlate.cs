@@ -46,6 +46,16 @@ namespace BingoPlateGenerator.Models
 
             printLoop();
 
+
+
+            if (verifyRow(1) > 4)
+            {
+                for (int x = 0; x < 9; x++)
+                {
+                    printSpot(1, x);
+                }
+            }
+
             if (TotalNumbers < 15)
             {
                 printLoop();
@@ -98,7 +108,7 @@ namespace BingoPlateGenerator.Models
         }
 
         /// <summary>
-        /// metode til at checke at en genereret plade er lovlig
+        /// metode til at checke at en række på pladen er lovlig
         /// </summary>
         private int verifyRow(int y)
         {

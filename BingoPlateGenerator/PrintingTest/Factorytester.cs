@@ -45,15 +45,17 @@ namespace PrintingTest
 
 
         [TestMethod]
-        public void WriteToMiddleField()
+        public void WriteToMiddleFieldInEmptyColumn()
         {//arrange
-            TestPlate.Columns[0][0] = 1;
+            TestPlate.Columns[0][0] = 0;
+            TestPlate.Columns[0][1] = 0;
+            TestPlate.Columns[0][2] = 0;
 
             //act
-            TestPlate.printSucces(1, 0);
+            TestPlate.CheckSpot(1, 0,2);
 
             //assert
-            Assert.IsTrue(TestPlate.Columns[0][2] != 0);
+            Assert.IsTrue(TestPlate.Columns[0][1] != 0);
 
         }
 
@@ -104,6 +106,7 @@ namespace PrintingTest
             //da pladerne altid tjekker 1 gang imod sig selv og failer.
             foreach (BingoPlate plate in factory.Batch)
             {
+             
                 result = factory.VerifyPlate(plate);
             }
 

@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj": {}
+    "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj": {
+    "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj",
+        "projectUniqueName": "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj",
         "projectName": "BingoPlateGenerator",
-        "projectPath": "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj",
-        "packagesPath": "C:\\Users\\Frede\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\obj\\",
+        "projectPath": "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj",
+        "packagesPath": "C:\\Users\\SA02- Frederik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\SA02- Frederik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -26,7 +30,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -57,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

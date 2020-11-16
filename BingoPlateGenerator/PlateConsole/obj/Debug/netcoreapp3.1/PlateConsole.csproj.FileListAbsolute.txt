@@ -19,3 +19,25 @@ D:\Documents\Projects\SpecialisterneCases\Case01\Case01GithubRepo\BingoPlateGene
 D:\Documents\Projects\SpecialisterneCases\Case01\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.dll
 D:\Documents\Projects\SpecialisterneCases\Case01\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.pdb
 D:\Documents\Projects\SpecialisterneCases\Case01\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.genruntimeconfig.cache
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\BingoPlateGenerator.Views.dll
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\BingoPlateGenerator.Views.pdb
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\BingoPlateGenerator.exe
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\PlateConsole.exe
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\PlateConsole.deps.json
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\PlateConsole.runtimeconfig.json
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\PlateConsole.runtimeconfig.dev.json
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\PlateConsole.dll
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\PlateConsole.pdb
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\BingoPlateGenerator.dll
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\bin\Debug\netcoreapp3.1\BingoPlateGenerator.pdb
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.csprojAssemblyReference.cache
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.AssemblyInfoInputs.cache
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.AssemblyInfo.cs
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.csproj.CoreCompileInputs.cache
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.csproj.CopyComplete
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.dll
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.pdb
+C:\Users\SA02- Frederik\Documents\GitHub\Case01GithubRepo\BingoPlateGenerator\PlateConsole\obj\Debug\netcoreapp3.1\PlateConsole.genruntimeconfig.cache

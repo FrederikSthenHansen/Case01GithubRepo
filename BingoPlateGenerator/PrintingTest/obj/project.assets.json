@@ -5736,20 +5736,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Frede\\.nuget\\packages\\": {}
+    "C:\\Users\\SA02- Frederik\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\PrintingTest\\PrintingTest.csproj",
+      "projectUniqueName": "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\PrintingTest\\PrintingTest.csproj",
       "projectName": "PrintingTest",
-      "projectPath": "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\PrintingTest\\PrintingTest.csproj",
-      "packagesPath": "C:\\Users\\Frede\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\PrintingTest\\obj\\",
+      "projectPath": "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\PrintingTest\\PrintingTest.csproj",
+      "packagesPath": "C:\\Users\\SA02- Frederik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\PrintingTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\SA02- Frederik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5760,10 +5765,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj": {
-              "projectPath": "D:\\Documents\\Projects\\SpecialisterneCases\\Case01\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj"
+            "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj": {
+              "projectPath": "C:\\Users\\SA02- Frederik\\Documents\\GitHub\\Case01GithubRepo\\BingoPlateGenerator\\BingoPlateGenerator\\BingoPlateGenerator.csproj"
             }
           }
         }
@@ -5776,7 +5780,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -5813,7 +5816,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
